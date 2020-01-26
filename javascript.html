@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Learning Javascript
+        </title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <script>
+        function add7 (x) {
+            return (x+7)
+        }   
+        console.log(add7(4))
+        
+        function multiply (x,y) {
+            return (x*y)
+        }
+        console.log(multiply(2,3))
+
+        
+        let string
+        function capitalize (string) {
+        
+            return (string.charAt(0).toUpperCase()+string.slice(1).toLowerCase())
+
+        }
+console.log(capitalize("vcevcErara"))
+
+function lastletter(string) {
+    return (string.substr(-1,1))
+}
+console.log(lastletter("zajicekaj"))
+
+function computerPlay () {
+let vyber=["Rock", "Scissors", "Paper"];
+let nahodne=vyber[Math.floor(Math.random()*3)];
+
+     return nahodne;
+}
+
+
+function playRound (playerSelection, computerSelection) {
+if ((playerSelection=="Rock" && computerSelection=="Paper") || (playerSelection=="Paper" && computerSelection=="Scissors") || (playerSelection=="Scissors" && computerSelection=="Rock"))
+return "Computer wins."
+
+else if (playerSelection==computerSelection)
+return "No result"
+
+else 
+return "Player wins."
+
+}
+
+
+const playerSelection='Rock'
+const computerSelection=computerPlay()
+
+console.log(playerSelection)
+console.log(computerSelection)
+console.log(playRound(playerSelection, computerSelection))
+
+        
+
+function game () {
+let playerSelection="Rock"
+let computerSelection=computerPlay
+return playRound(playerSelection,computerSelection)
+}
+for (let i=1, i<6, i++) {
+    console.log(game()); 
+}
+
+
+
+            </script>
+    </body>
+</html>

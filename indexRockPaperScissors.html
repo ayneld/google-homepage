@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Learning Javascript
+        </title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <script>
+        
+let vyber
+let nahodne
+function computerPlay (vyber,nahodne) {
+vyber=["rock", "scissors", "paper"];
+nahodne=vyber[Math.floor(Math.random()*3)];
+
+     return nahodne;
+}
+
+
+
+
+
+let player=0
+let computer=0
+function playRound () 
+{
+    let playerSelection=prompt("Rock, paper or scissors?").toLowerCase();
+const computerSelection=computerPlay(vyber,nahodne);
+
+if ((playerSelection=="rock" && computerSelection=="paper") || (playerSelection=="paper" && computerSelection=="scissors") || (playerSelection=="scissors" && computerSelection=="rock"))
+{
+    computer++;
+return ("Computer wins.");
+}
+else if (playerSelection==computerSelection) 
+{
+return ("No result");
+}
+else 
+{
+    player++;
+return ("Player wins.");
+}
+}
+
+
+
+
+function game() {
+    for (let i=1;i<6;i++) {
+    console.log(playRound());
+}
+}
+game()
+
+
+function result() {
+    if (player>computer) {
+        return ("You won.");
+    }
+    else if (player<computer) {
+        return ("You lose.");
+    }
+    else {
+        return ("50:50")
+    }
+}
+console.log(result())
+console.log("Good job, Lenka")
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+ 
+            </script>
+    </body>
+</html>
